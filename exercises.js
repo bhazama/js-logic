@@ -248,7 +248,7 @@ for (var i = 0; i<toyotaModels.length; i++){
    console.log("Toyota " + toyotaModels[i]);
 }
 
-var boy = 5
+
 /* 
  * #15
  * Create a for loop that will iterate 5 times and console.log the following:
@@ -269,7 +269,9 @@ for (var i = 0; i<playerList.length; i++){
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
-
+ for (var i = 0; i<myFavFoods.length; i++){
+ 	console.log(myFavFoods[i]);
+ }
 
 /*
  * #17
@@ -285,7 +287,7 @@ for (var i = 0; i<playerList.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
-
+function sumItUp()
 
 
 /*
