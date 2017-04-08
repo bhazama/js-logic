@@ -28,8 +28,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  *
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
-
-
+function canVote(age){
+	if (age >= 18){
+		return true;
+	}else {
+		return false;
+	}
+}
+console.log(canVote(21));
 /*
  * #2
  * Function - login
@@ -41,7 +47,14 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
-
+function login(password){
+	if (password == "test1234"){
+		return "Login Success!";
+	}else{
+		return false;
+	}
+}
+console.log(login("test1234"));
 
 /*
  * #3
@@ -235,7 +248,7 @@ for (var i = 0; i<toyotaModels.length; i++){
    console.log("Toyota " + toyotaModels[i]);
 }
 
-
+var boy = 5
 /* 
  * #15
  * Create a for loop that will iterate 5 times and console.log the following:
@@ -245,7 +258,11 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
+var playerList = ["Player: 1", "Player: 2", "Player: 3", "Player: 4", "Player: 5"];
 
+for (var i = 0; i<playerList.length; i++){
+	console.log(playerList[i]);
+}
 
 /* 
  * #16
