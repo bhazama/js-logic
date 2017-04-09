@@ -174,7 +174,7 @@ function spareChange(money){
 	}
 }
 console.log("#8 ", spareChange(50));
-
+console.log("delete me")
 /*
  * #9
  * Function - dirty30
