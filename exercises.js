@@ -30,12 +30,10 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
 */
 function canVote(age){
 	if (age >= 18){
-		return true;
-	}else {
-		return false;
+		return true
 	}
 }
-console.log("#1: ", canVote(21));
+console.log(canVote(18));
 /*
  * #2
  * Function - login
@@ -168,8 +166,14 @@ console.log("#7: ", notEqual("yes", "no"));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function spareChange(money){
+	if (money>100){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log("#8 ", spareChange(50));
 
 /*
  * #9
@@ -357,8 +361,9 @@ function allStars(ballers){
 	}
 }
 allStars(players);
-console.log(east);
-console.log(west);
+console.log("East Team: ", east);
+console.log("West Team: ", west);
+
 /*
  * #19
  * Function - subways
