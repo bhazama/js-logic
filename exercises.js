@@ -35,7 +35,7 @@ function canVote(age){
 		return false;
 	}
 }
-console.log(canVote(21));
+console.log("#1: ", canVote(21));
 /*
  * #2
  * Function - login
@@ -54,7 +54,7 @@ function login(password){
 		return false;
 	}
 }
-console.log(login("test1234"));
+console.log("#2: ", login("test1234"));
 
 /*
  * #3
@@ -68,8 +68,12 @@ console.log(login("test1234"));
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+function isGreaterthan(first,second){
+	if (first > second){
+		return true;
+	}
+}
+console.log("#3: ", (isGreaterthan(2,1)));
 
 /*
  * #4
@@ -82,7 +86,12 @@ console.log(login("test1234"));
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
+function mustBeTrue(boo){
+	if (boo === true){
+		return true;
+	}
+}
+console.log("#4: ", (mustBeTrue(true)));
 
 
 /*
@@ -96,7 +105,14 @@ console.log(login("test1234"));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
+function bigBird(word){
+	if (word.length ===3){
+		return "Word to Big Bird!";
+	}else{
+		return false;
+	}
+}
+console.log("#5: ", bigBird("boy"));
 
 
 /*
@@ -111,7 +127,14 @@ console.log(login("test1234"));
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
+function isEqual(first,second){
+	if (first === second){
+		return "You look mahvelous!";
+	}else{
+		return "I don't know who you are anymore";
+	}
+}
+console.log("#6: ", isEqual("potato","potato"));
 
 /*
  * #7
@@ -287,7 +310,18 @@ for (var i = 0; i<playerList.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
-function sumItUp()
+var numArray = [1,2,3,4,5];
+var total = 0
+function sumItUp(arr){
+	for (var i = 0; i<arr.length; i++){
+		total += arr[i];
+	}
+	return total;
+}
+console.log(sumItUp(numArray));
+
+
+
 
 
 /*
@@ -301,7 +335,23 @@ function sumItUp()
  * The function will loop through the players array and will put all the even number indexed players in the `east` array and the rest in the `west` array.
  * Console.log both the east and west arrays.
 */ 
+var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jordan"];
+  var east = [];
+  var west = [];
 
+function allStars(ballers){
+	for(var i = 0; i<ballers.length; i++){
+		console.log(ballers[i]);
+		if (i%2 === 0){
+			east.push(ballers[i]);
+		}else {
+			west.push(ballers[i]);
+		}
+	}
+}
+allStars(players);
+console.log(east);
+console.log(west);
 /*
  * #19
  * Function - subways
@@ -314,8 +364,17 @@ function sumItUp()
  * Console.log your results.
 */ 
 
-  var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+function subways(special){
+	for (var i = 0; i<special.length; i++){
+		if (i%2 !== 0){
+			special.splice(i, 1, "Classic Tuna");
+		}
+	}
+	return special
+}
+console.log(subways(subOftheDay));
 
 /*
 Final Boss
@@ -331,7 +390,17 @@ Final Boss
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
  
-  
+  function removeLetter(str){
+  	var newArr = []
+  	for (var i = 0; i<str.length; i++){
+  		if (str[i] !== "a" && str[i] !== "A"){
+  			newArr.push(str[i]);
+  		}
+  	}
+ 	return newArr;
+ 	console.log(newArr); /* why does this not show in git */
+  }
+console.log(removeLetter(phrase));
   
 
 
