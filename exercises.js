@@ -174,7 +174,7 @@ function spareChange(money){
 	}
 }
 console.log("#8 ", spareChange(50));
-console.log("delete me")
+
 /*
  * #9
  * Function - dirty30
@@ -188,7 +188,14 @@ console.log("delete me")
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function dirty30(one,two,three){
+	if (one + two + three > 30){
+		return true;
+	}else{
+		return false;
+	}
+}
+console.log("#9: ", dirty30(10,10,10));
 
 
 /*
@@ -202,8 +209,14 @@ console.log("delete me")
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function evenStevens(num){
+	if (num%2 === 0){
+		return true;
+	}else{
+		return false
+	}
+}
+console.log("#10: ", evenStevens(3));
 
 
 /*
@@ -218,8 +231,14 @@ console.log("delete me")
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
-
+function daClub(cover,age){
+	if (cover >= 21 && age >= 21){
+		return "Welcome to Legends Lounge";
+	}else{
+		return "Chuck E Cheese is across the street";
+	}
+}
+console.log("#11: ", daClub(19,21));
 /*
  * #12
  * Function - graduation
@@ -232,8 +251,14 @@ console.log("delete me")
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
+function graduation(credits,thesis){
+	if (credits >= 120 || thesis === true){
+		return "Congratulations on a job well done";
+	}else{
+		return "See you in summer school";
+	}
+}
+console.log("#12: ", graduation(121,true));
 
 /*
  * #13
@@ -246,7 +271,15 @@ console.log("delete me")
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
+function moneyTrain(speed){
+	if (speed < 50){
+		return "You are riding Honolulu's Rail";
+	}else if (speed >= 100){
+		return "Now you ballin' in the Shinkansen";
+	}else {
+		return "You are riding an Amtrak";
+	}
+}console.log("#13: ", moneyTrain(51));
 
 /*
  * #14
@@ -261,11 +294,32 @@ console.log("delete me")
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 21;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+
+function buyDoughnut(){
+	if(budget >= doughnutPrice){
+		budget -= doughnutPrice;
+		doughnutBought++;
+	}
+}
+
+function buyDoughnut1(){
+	return (budget -= doughnutPrice) && (doughnutBought++);
+}
 
 
 
+	
+buyDoughnut();
+console.log("#14: ", buyDoughnut());
+console.log("budget:", budget);
+console.log("doughnuts bought: ", doughnutBought);
 
-
+buyDoughnut1();
+console.log("budget1: ", budget);
+console.log("doughnuts bought1: ", doughnutBought);
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
 
