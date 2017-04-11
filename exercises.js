@@ -332,10 +332,9 @@ The for loop is made up for 3 parts:
 
 var toyotaModels = ["Corolla", "Prius", "4 Runner", "Camry", "Land Cruiser"];
 
-for (var i = 0; i<toyotaModels.length; i++){
-   console.log("Toyota " + toyotaModels[i]);
+for (var i = 0; i < toyotaModels.length; i++){
+	console.log("Toyota " + toyotaModels[i]);
 }
-
 
 /* 
  * #15
@@ -349,7 +348,7 @@ for (var i = 0; i<toyotaModels.length; i++){
 var playerList = ["Player: 1", "Player: 2", "Player: 3", "Player: 4", "Player: 5"];
 
 for (var i = 0; i<playerList.length; i++){
-	console.log(playerList[i]);
+	console.log("#15: ", playerList[i]);
 }
 
 /* 
@@ -358,7 +357,7 @@ for (var i = 0; i<playerList.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
  for (var i = 0; i<myFavFoods.length; i++){
- 	console.log(myFavFoods[i]);
+ 	console.log("#16: ", myFavFoods[i]);
  }
 
 /*
@@ -376,14 +375,16 @@ for (var i = 0; i<playerList.length; i++){
  * Console.log your result.
 */
 var numArray = [1,2,3,4,5];
-var total = 0
+var total = 0;
 function sumItUp(arr){
-	for (var i = 0; i<arr.length; i++){
+	for ( var i = 0; i<arr.length; i++){
 		total += arr[i];
 	}
-	return total;
+return total;
 }
-console.log(sumItUp(numArray));
+console.log("#17: ", sumItUp(numArray));
+
+
 
 
 
@@ -405,15 +406,18 @@ var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jord
   var west = [];
 
 function allStars(ballers){
-	for(var i = 0; i<ballers.length; i++){
-		console.log(ballers[i]);
-		if (i%2 === 0){
-			east.push(ballers[i]);
-		}else {
-			west.push(ballers[i]);
-		}
-	}
+  for (var i = 0; i<ballers.length; i++){
+    console.log(ballers[i]);
+    if (i%2 === 0){
+      east.push(ballers[i]);
+    }else{
+      west.push(ballers[i]);
+    }
+  }
 }
+	
+	
+
 allStars(players);
 console.log("East Team: ", east);
 console.log("West Team: ", west);
@@ -438,7 +442,7 @@ function subways(special){
 			special.splice(i, 1, "Classic Tuna");
 		}
 	}
-	return special
+	return special;
 }
 console.log(subways(subOftheDay));
 
